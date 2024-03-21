@@ -8,7 +8,7 @@ import (
 func main() {
 	ch := make(chan int)
 	go func() {
-		time.Sleep(2000 * time.Millisecond)
+		time.Sleep(2 * time.Second)
 		ch <- 1
 	}()
 	fmt.Println(<-ch)
