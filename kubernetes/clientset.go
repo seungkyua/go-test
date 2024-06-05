@@ -23,7 +23,7 @@ func main() {
 	adminClientSet, adminDynamicClientSet := GetAdminClientSet()
 
 	//var namespace = "c09ajojmv"
-	var namespace = "co-op2-1"
+	var namespace = "co-op3-1"
 	secrets, err := adminClientSet.CoreV1().Secrets(namespace).Get(context.TODO(), namespace+"-tks-kubeconfig", metav1.GetOptions{})
 	if err != nil {
 		fmt.Printf("cannot found %s-tks-kubeconfig secret in %s namespace\n", namespace, namespace)
